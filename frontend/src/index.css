@@ -1,0 +1,156 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background-color: white;
+  color: #333;
+  padding: 20px;
+}
+
+/* Navbar Styles */
+.navbar {
+  background: white;
+  /* padding-top: 5px; */
+  text-align: center;
+}
+
+.navbar a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  /* margin: 0 15px; */
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Container */
+/* .container {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+} */
+
+/* Buttons */
+button {
+  background: #616466;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: #070707;
+}
+
+/* Input Fields */
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  height: 150px;
+  resize: none;
+}
+
+/* Post List */
+.post {
+  padding: 15px;
+  background: #fff;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.post h2 {
+  color: #007bff;
+}
+
+.post p {
+  margin-top: 10px;
+}
+
+/* Post Detail Page */
+.post-detail h2 {
+  color: #343a40;
+  margin-bottom: 10px;
+}
+
+.post-detail p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Comments Section */
+/* .comment-section {
+  margin-top: 20px;
+}
+
+.comment {
+  background: #f1f1f1;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+} */
+
+.comment b {
+  color: #007bff;
+}
+
+/* Footer */
+.footer-btn {
+  text-align: center;
+  background-color: rgb(24, 23, 23);
+  padding: 50px 40px;
+  margin-top: 200px;
+  color: white;
+  font-style: italic;
+}
+
+footer {
+  opacity: 0.3;
+  padding-top: 20px;
+  padding-right: 50%;
+}
+
+.social-lists {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  color: black;
+  margin-left: 150%;
+}
+
+.social-lists svg {
+  color: white;
+  display: inline;
+  font-size: 2rem;
+}
+
+.social-icon {
+  color: red;
+}
+
+img .trash {
+  size: 10px;
+}
+
+
+

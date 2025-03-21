@@ -1,0 +1,98 @@
+/* Login.css */
+
+/* Centering the login form */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f4f6; /* Tailwind gray-100 */
+  }
+  
+  /* Login Box */
+  .login-box {
+    background: white;
+    padding: 2rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 380px;
+    text-align: center;
+  }
+  
+  /* Heading */
+  .login-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #374151; /* Tailwind gray-700 */
+    margin-bottom: 1rem;
+  }
+  
+  /* Input Fields */
+  .login-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db; /* Tailwind gray-300 */
+    border-radius: 5px;
+    margin-bottom: 10px;
+    outline: none;
+    transition: 0.3s;
+  }
+  
+  .login-input:focus {
+    border-color: #2563eb; /* Tailwind blue-500 */
+    box-shadow: 0 0 5px rgba(37, 99, 235, 0.5);
+  }
+  
+  /* Submit Button */
+  .login-btn {
+    width: 100%;
+    background: #1c1c1d; /* Tailwind blue-500 */
+    color: white;
+    padding: 0.75rem;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .login-btn:hover {
+    background: #454546; /* Tailwind blue-600 */
+  }
+  
+  /* Register Link */
+  .register-link {
+    text-align: center;
+    margin-top: 10px;
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .register-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Password Input Container */
+.password-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  /* Eye Icon Button */
+  .toggle-password {
+  position: absolute;
+  right: 10px; /* Keep it inside */
+  top: 58%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #555;
+  background: none;
+  border: none;
+  outline: none;
+  }
+  
+  .toggle-password:hover {
+    color: #2563eb; /* Tailwind blue-500 */
+  }
+  
