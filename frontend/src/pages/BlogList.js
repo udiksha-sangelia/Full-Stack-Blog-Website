@@ -52,7 +52,7 @@ const BlogList = () => {
 
               <div className="post-actions">
                 <Link to={`/post/${post._id}`} className="read-more">Read More</Link>
-                <Link to={`/edit/${post._id}`} className="edit-btn"><img src= {edit} alt="edit"/></Link>
+                {/* <Link to={`/edit/${post._id}`} className="edit-btn"><img src= {edit} alt="edit"/></Link> */}
               </div>
             </div>
           ))

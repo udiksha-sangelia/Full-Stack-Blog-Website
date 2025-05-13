@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-import PostList from "./components/PostList";
+// import PostList from "./components/PostList";
 import PostForm from "./components/PostForm";
 import PostDetail from "./components/PostDetail";
-import PostPage from "./pages/PostPage";
+// import PostPage from "./pages/PostPage";
 import EditPost from "./pages/EditPage";
 import Navbar from "./components/NavBar";
 import Home from "./pages/Home";

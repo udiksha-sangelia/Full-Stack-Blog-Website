@@ -73,7 +73,6 @@ exports.updatePost = async (req, res) => {
       return res.status(404).json({ message: "Post not found" });
     }
     
-
     // Update post
     post.title = title;
     post.content = content;
@@ -118,8 +117,6 @@ exports.deletePost = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
-
-
 
 // Add comment to a post
 exports.addComment = async (req, res) => {
