@@ -8,6 +8,8 @@ const PostForm = () => {
   const [createdBy, setCreatedBy] = useState("");
   const navigate = useNavigate();
 
+  const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -19,7 +21,7 @@ const PostForm = () => {
       }
   
       const response = await axios.post(
-        "http://localhost:5000/api/posts",
+        `${API_BASE_URL}/api/posts`,
         { title, content },
         {
           headers: { 

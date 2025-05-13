@@ -10,6 +10,8 @@ const Register = () => {
   const [error, setError] = useState(""); // Track errors
   const navigate = useNavigate();
 
+  const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -52,7 +54,7 @@ const Register = () => {
     if (!validateInputs()) return; // Stop if validation fails
     
     try {
-      const response = await axios.post("http://localhost:5000/api/auth/register", formData, {
+      const response = await axios.post(`${API_BASE_URL}/api/auth/register`, formData, {
         headers: {
           "Content-Type": "application/json",
         },

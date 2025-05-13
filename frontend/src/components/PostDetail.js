@@ -21,6 +21,7 @@ const PostDetail = () => {
 
   console.log("Current user from localStorage:", currentUser);
 
+  const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 
   useEffect(() => {
     const fetchPost = async () => { 
@@ -29,7 +30,7 @@ const PostDetail = () => {
         return;
       }
       try {
-        const res = await axios.get(`http://localhost:5000/api/posts/${id}`, {
+        const res = await axios.get(`${API_BASE_URL}/api/posts/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
        
       });
@@ -55,7 +56,7 @@ const PostDetail = () => {
         console.log("Attempting to delete post with ID:", id);
 
     
-        await axios.delete(`http://localhost:5000/api/posts/${id}`, {
+        await axios.delete(`${API_BASE_URL}/api/posts/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
     
@@ -87,7 +88,7 @@ const PostDetail = () => {
         console.log("Sending comment:", { userId: currentUser._id, comment }); // ✅ Sending username instead of ID
     
         const res = await axios.post(
-          `http://localhost:5000/api/posts/${id}/comments`,
+          `${API_BASE_URL}/api/posts/${id}/comments`,
           { userId: currentUser._id, comment }, // ✅ Sending user NAME, not ID
           { headers: { Authorization: `Bearer ${token}` } }
         );
@@ -125,7 +126,7 @@ const PostDetail = () => {
         }
     
         // API request to delete the comment
-        const res = await axios.delete(`http://localhost:5000/api/posts/${postId}/comments/${commentId}`, {
+        const res = await axios.delete(`${API_BASE_URL}/api/posts/${postId}/comments/${commentId}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
     

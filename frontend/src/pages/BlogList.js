@@ -8,6 +8,8 @@ const BlogList = () => {
   const [posts, setPosts] = useState([]);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
+
+  const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
   
   useEffect(() => {
     const fetchPosts = async () => {
@@ -19,7 +21,7 @@ const BlogList = () => {
       }
 
       try {
-        const { data } = await axios.get("http://localhost:5000/api/posts", {
+        const { data } = await axios.get(`${API_BASE_URL}/api/posts`, {
           headers: { Authorization: `Bearer ${token}` },
         });
 

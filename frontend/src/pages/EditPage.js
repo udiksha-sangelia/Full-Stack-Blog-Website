@@ -10,6 +10,8 @@ const EditPost = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
+  const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
   useEffect(() => {
     const fetchPost = async () => {
       const token = localStorage.getItem("token"); // ✅ Get token from storage
@@ -20,7 +22,7 @@ const EditPost = () => {
       }
   
       try {
-        const response = await axios.get(`http://localhost:5000/api/posts/${id}`, {
+        const response = await axios.get(`${API_BASE_URL}/api/posts/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`, // ✅ Add token here
           },
@@ -50,7 +52,7 @@ const EditPost = () => {
     const userId = localStorage.getItem("userId"); // ✅ Ensure `userId` is stored after login
   
     try {
-      await axios.put(`http://localhost:5000/api/posts/${id}`, 
+      await axios.put(`${API_BASE_URL}/api/posts/${id}`, 
         { ...post, createdBy: userId }, // ✅ Ensure `createdBy` is an ObjectId
         {
           headers: {

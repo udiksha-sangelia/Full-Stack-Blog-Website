@@ -10,6 +10,8 @@ const Login = ({setIsAuthenticated}) => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
+  const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -45,7 +47,7 @@ const Login = ({setIsAuthenticated}) => {
     if (!validateInputs()) return; // Stop if validation fails
 
     try {
-        const response = await axios.post("http://localhost:5000/api/auth/login", formData, {
+        const response = await axios.post(`${API_BASE_URL}/api/auth/login`, formData, {
             headers: { "Content-Type": "application/json" },
         });
 
@@ -96,7 +98,7 @@ const Login = ({setIsAuthenticated}) => {
     </form>
 
     <p className="register-link">
-      Don't have an account? <a href="/register">Register</a>
+      Don't have an account? <link to="/register">Register</link>
     </p>
   </div>
 </div>
