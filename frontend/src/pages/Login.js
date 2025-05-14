@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import {FaEye, FaEyeSlash} from "react-icons/fa";
 import "../styles/Login.css";
@@ -98,7 +98,7 @@ const Login = ({setIsAuthenticated}) => {
     </form>
 
     <p className="register-link">
-      Don't have an account? <link to="/register">Register</link>
+      Don't have an account? <Link to="/register">Register</Link>
     </p>
   </div>
 </div>

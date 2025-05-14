@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import {FaEye, FaEyeSlash} from "react-icons/fa";
 import axios from "axios"; // Import axios
 import "../styles/Register.css";
@@ -89,7 +89,7 @@ const Register = () => {
     </form>
 
     <p className="login-link">
-      Already have an account? <a href="/login">Login</a>
+      Already have an account? <Link to="/login">Login</Link>
     </p>
   </div>
 </div>
