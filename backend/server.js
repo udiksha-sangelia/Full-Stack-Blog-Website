@@ -5,13 +5,14 @@ const connectDB = require("./config/db");
 const postRoutes = require("./routes/postRoutes");
 const authRoutes = require("./routes/authRoutes");
 const bodyParser = require("body-parser");
-const app = express();
 
 dotenv.config();
 connectDB();
 
+const app = express();
+
 // Middleware
-app.use(cors({ origin: ["http://localhost:3000","https://full-stack-blog-website-34xo.vercel.app"] , methods: ["GET", "POST", "PUT", "DELETE"], credentials: true }));
+app.use(cors({ origin: ["https://full-stack-blog-website-34xo.vercel.app", "http://localhost:3000"] , methods: ["GET", "POST", "PUT", "DELETE"], credentials: true }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());

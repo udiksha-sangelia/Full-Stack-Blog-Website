@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../styles/BlogList.css"; // Import CSS
-import edit from "../assests/pencil-fill.svg";
 
 const BlogList = () => {
   const [posts, setPosts] = useState([]);

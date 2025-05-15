@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getPostById, deletePost, addComment, deleteComment } from "../api/api";
-import { useNavigate, useParams, Link } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import trash from "../assests/trash-fill.svg";
 import edit from "../assests/pencil-fill.svg";
