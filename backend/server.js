@@ -12,7 +12,7 @@ connectDB();
 const app = express();
 
 // Middleware
-app.use(cors({ origin: ["https://full-stack-blog-website-34xo.vercel.app"] , methods: ["GET", "POST", "PUT", "DELETE"], credentials: true }));
+app.use(cors({ origin: ["https://full-stack-blog-website-34xo.vercel.app", "http://localhost:3000"] , methods: ["GET", "POST", "PUT", "DELETE"], credentials: true }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
