@@ -1,104 +1,129 @@
 /* Register.css */
-
-/* Centering & Page Styling */
 .register-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: #f3f4f6; /* Tailwind gray-100 */
-  }
-  
-  /* Card Styling */
-  .register-box {
-    background: white;
-    padding: 2rem;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    width: 380px;
-  }
-  
-  /* Heading */
-  .register-title {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #374151; /* Tailwind gray-700 */
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  
-  /* Input Fields */
-  .register-input {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #d1d5db; /* Tailwind gray-300 */
-    border-radius: 5px;
-    margin-bottom: 10px;
-    outline: none;
-    transition: 0.3s;
-  }
-  
-  .register-input:focus {
-    border-color: #2563eb; /* Tailwind blue-500 */
-    box-shadow: 0 0 5px rgba(37, 99, 235, 0.5);
-  }
-  
-  /* Submit Button */
-  .register-btn {
-    width: 100%;
-    background: #232324; /* Tailwind blue-500 */
-    color: white;
-    padding: 0.75rem;
-    border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  .register-btn:hover {
-    background: #444446; /* Tailwind blue-600 */
-  }
-  
-  /* Error Message */
-  .error-message {
-    color: red;
-    text-align: center;
-    font-size: 14px;
-    margin-bottom: 10px;
-  }
-  
-  /* Login Link */
-  .login-link {
-    text-align: center;
-    margin-top: 10px;
-    color: #2563eb;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .login-link:hover {
-    text-decoration: underline;
-  }
-  
-  .register-password-container {
-    position: relative;
-    width: 100%;
-  }
-  
-  /* Eye Icon Button */
-  .toggle-register-password {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: linear-gradient( 90.5deg,  rgba(112,181,176,1) 1.9%, rgba(220,244,241,1) 87.7% );
+  backdrop-filter: blur(5px);
+}
+
+.register-box {
+  background: radial-gradient( circle 404px at 20.3% 15.9%,  rgba(0,79,255,1) 0%, rgba(0,240,255,1) 90% );
+  backdrop-filter: blur(10px);
+  padding: 40px 30px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(83, 54, 163, 0.2);
+}
+
+.register-title {
+  font-size: 2rem;
+  font-family: cursive;
+  color: #3a3849;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+.error-message {
+  background: #ffdddd;
+  border: 1px solid #ff5c5c;
+  padding: 10px 15px;
+  color: #b00020;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.register-input {
+  width: 100%;
+  font-family: cursive;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  background: rgba(0, 0, 0, 0.4);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.register-input::placeholder {
+  color: #ccc;
+}
+
+.register-password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.password-container-input::placeholder {
+  color: #ccc;
+}
+.register-password-container input {
+  width: 100%;
+  font-family: cursive;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  background: rgba(0, 0, 0, 0.4);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.toggle-register-password {
   position: absolute;
-  right: 10px; /* Keep it inside */
-  top: 58%;
+  right: 15px;
+  top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
+  color: #1c1c1d;
   font-size: 1.2rem;
-  color: #555;
-  background: none;
+}
+
+.toggle-register-password:hover {
+   color: #252425;
+}
+
+.register-btn {
+  width: 100%;
+  font-family: cursive;
+  background: linear-gradient(135deg, #3357cc, #725ece);
+  color: white;
   border: none;
-  outline: none;
-  }
-  
-  .toggle-register-password:hover {
-    color: #2563eb; /* Tailwind blue-500 */
-  }
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.register-btn:hover {
+   transform: scale(1.05);
+  box-shadow: 0 0 15px #00ffff;
+}
+
+.login-link {
+ margin-top: 20px;
+  color:  #635f5f;;
+  font-family: cursive;
+}
+
+.login-link a {
+  color: #473caa;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+   text-decoration: underline;
+  color: #590fd1;
+}

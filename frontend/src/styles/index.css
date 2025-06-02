@@ -1,4 +1,4 @@
-/* Global Reset */
+/* 
 * {
   margin: 0;
   padding: 0;
@@ -12,10 +12,10 @@ body {
   padding: 20px;
 }
 
-/* Navbar Styles */
+
 .navbar {
   background: white;
-  /* padding-top: 5px; */
+
   text-align: center;
 }
 
@@ -23,24 +23,14 @@ body {
   color: black;
   text-decoration: none;
   font-size: 18px;
-  /* margin: 0 15px; */
+
 }
 
 .navbar a:hover {
   text-decoration: underline;
 }
 
-/* Container */
-/* .container {
-  max-width: 800px;
-  margin: auto;
-  background: white;
-  padding: 20px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-} */
 
-/* Buttons */
 button {
   background: #616466;
   color: white;
@@ -55,7 +45,7 @@ button:hover {
   background: #070707;
 }
 
-/* Input Fields */
+
 input,
 textarea {
   width: 100%;
@@ -70,7 +60,7 @@ textarea {
   resize: none;
 }
 
-/* Post List */
+
 .post {
   padding: 15px;
   background: #fff;
@@ -87,7 +77,6 @@ textarea {
   margin-top: 10px;
 }
 
-/* Post Detail Page */
 .post-detail h2 {
   color: #343a40;
   margin-bottom: 10px;
@@ -98,23 +87,10 @@ textarea {
   line-height: 1.6;
 }
 
-/* Comments Section */
-/* .comment-section {
-  margin-top: 20px;
-}
-
-.comment {
-  background: #f1f1f1;
-  padding: 10px;
-  margin-top: 10px;
-  border-radius: 5px;
-} */
-
 .comment b {
-  color: #007bff;
+  color: #0a0d0f;
 }
 
-/* Footer */
 .footer-btn {
   text-align: center;
   background-color: rgb(24, 23, 23);
@@ -153,4 +129,57 @@ img .trash {
 }
 
 
+ */
 
+ /* index.css */
+
+/* CSS Reset - normalize default browser styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set default font and background */
+body, html, #root {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Make images responsive */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Links */
+a {
+  color: #0077cc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #005fa3;
+  text-decoration: underline;
+}
+
+/* Buttons */
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* Utility container to center and constrain width */
+.container {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}

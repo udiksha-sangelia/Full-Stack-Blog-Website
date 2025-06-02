@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
+import "../styles/EditPage.css"
 
 const EditPost = () => {
   const { id } = useParams();
@@ -82,7 +83,7 @@ const EditPost = () => {
         <label>Content:</label>
         <textarea name="content" className="post-content" value={post.content} onChange={handleChange} required />
 
-        <button type="submit">Update Post</button>
+        <button type="submit" className="update-btn">Update Post</button>
         <button type="button" onClick={() => navigate("/blogs")}>Cancel</button>
       </form>
       </div>

@@ -1,0 +1,83 @@
+/* EditPost.css: Neon Galaxy Theme */
+
+.edit-post {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 40px 20px;
+  color: #fff;
+}
+
+.post-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  width: 100%;
+  max-width: 600px;
+}
+
+.post-card h2 {
+  font-size: 2rem;
+  color: #00ffff;
+  margin-bottom: 20px;
+}
+
+.post-card label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: bold;
+  color: #35b1d6;
+}
+
+.post-title,
+.post-content {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.post-title::placeholder,
+.post-content::placeholder {
+  color: #ccc;
+}
+
+.post-content {
+  min-height: 150px;
+}
+
+.post-card button {
+  background: linear-gradient(135deg, #3357cc, #725ece);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  margin: 10px 5px 0 0;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.post-card button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00ffff;
+}
+
+.post-card button[type="button"] {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid #7756cf;
+}
+
+.post-card button[type="button"]:hover {
+  color: #000;
+}
+
+.update-btn {
+  background: linear-gradient(135deg, #3357cc, #725ece);
+}

@@ -1,63 +1,85 @@
+/* Contact.css: Neon Galaxy Theme */
+
 .contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  min-height: 100vh;
+  color: #fff;
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(202,248,255,1) 0%, rgba(186,204,227,1) 51.2%, rgba(117,144,179,1) 100.1% );
   text-align: center;
-  max-width: 400px;
-  margin-left: 470px;
-  margin-top: 50px;
-  padding: 20px;
+}
+
+.contact-container h1 {
+  font-size: 2.5rem;
+  color: #7852d1;
+  text-shadow: 0 0 10px #00ffff;
+  margin-bottom: 40px;
+}
+
+.contact-card {
+    background-image: linear-gradient( 180.4deg,  rgba(0,6,10,1) 1%, rgba(1,190,237,1) 91.4% );
+  backdrop-filter: blur(10px);
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  max-width: 600px;
+  width: 100%;
 }
 
 .contact-info {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 18px;
-  margin-bottom: 15px;
+  gap: 15px;
+  margin-bottom: 20px;
 }
 
-.contact-card {
-  margin-top: 40px;
-  
+.contact-info p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.contact-info strong {
+  color: #ff00ff;
 }
 
 .icon {
-  font-size: 39px;
-  color: #0f0e0e;
+  font-size: 1.8rem;
+  color: #00ffff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+  color: #ff00ff;
 }
 
 .social-icons {
-  margin: 100px 0px;
-  margin-right: 50px ;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .social-icons a {
-  margin: 0 10px;
-  font-size: 28px;
-  color: #007bff;
-  transition: 0.3s;
+  text-decoration: none;
 }
 
-.social-icons a:hover {
-  color: #e76f51;
+.social-icons .icon {
+  font-size: 2rem;
 }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
+@media (max-width: 768px) {
+  .contact-container h1 {
+    font-size: 2rem;
+  }
 
-.contact-form button {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  cursor: pointer;
-  transition: 0.3s;
-}
+  .contact-card {
+    padding: 20px;
+  }
 
-.contact-form button:hover {
-  background-color: #0056b3;
+  .icon {
+    font-size: 1.5rem;
+  }
 }

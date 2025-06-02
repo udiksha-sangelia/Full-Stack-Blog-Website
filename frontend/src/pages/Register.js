@@ -2,12 +2,13 @@ import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import {FaEye, FaEyeSlash} from "react-icons/fa";
 import axios from "axios"; // Import axios
-import "../styles/Register.css";
+import "../styles/register.css";
 
 const Register = () => {
   const [formData, setFormData] = useState({ name: "", email: "", password: "" });
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState(""); // Track errors
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
@@ -50,6 +51,8 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    setError("");
 
     if (!validateInputs()) return; // Stop if validation fails
     
@@ -80,12 +83,14 @@ const Register = () => {
       <input type="text" name="name" placeholder="Full Name" onChange={handleChange} className="register-input" required />
       <input type="email" name="email" placeholder="Email Address" onChange={handleChange} className="register-input" required />
        <div className="register-password-container">
-        <input type={showPassword ? "text" : "password"}  name="password" placeholder="Password" onChange={handleChange}  required />
+        <input type={showPassword ? "text" : "password"}  name="password" placeholder="Password" onChange={handleChange} className="password-container-input" required />
           <span onClick={togglePasswordVisibility} className="toggle-register-password">
               {showPassword ? <FaEyeSlash /> : <FaEye />}
           </span>
         </div>
-      <button type="submit" className="register-btn">Sign Up</button>
+      <button type="submit" className="register-btn">Sign Up
+        {loading ? "Loading..." : "Login"}
+      </button>
     </form>
 
     <p className="login-link">

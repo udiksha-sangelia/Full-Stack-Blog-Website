@@ -8,6 +8,7 @@ const Login = ({setIsAuthenticated}) => {
   const [showPassword, setShowPassword] = useState(false);
   const [formData, setFormData] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
@@ -43,6 +44,8 @@ const Login = ({setIsAuthenticated}) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    setError("");
 
     if (!validateInputs()) return; // Stop if validation fails
 
@@ -89,12 +92,14 @@ const Login = ({setIsAuthenticated}) => {
     <form onSubmit={handleSubmit}>
       <input type="email" name="email" placeholder="Email" onChange={handleChange} className="login-input" required />
       <div className="password-container">
-      <input type={showPassword ? "text" : "password"}  name="password" placeholder="Password" onChange={handleChange}  required />
+      <input type={showPassword ? "text" : "password"}  name="password" placeholder="Password" onChange={handleChange} className="password-container-input" required />
       <span onClick={togglePasswordVisibility} className="toggle-password">
               {showPassword ? <FaEyeSlash /> : <FaEye />}
       </span>
       </div>
-      <button type="submit" className="login-btn">Login</button>
+      <button type="submit" className="login-btn">
+        {loading ? "Loading..." : "Login"}
+      </button>
     </form>
 
     <p className="register-link">

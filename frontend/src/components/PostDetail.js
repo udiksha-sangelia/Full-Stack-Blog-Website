@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import trash from "../assests/trash-fill.svg";
 import edit from "../assests/pencil-fill.svg";
+import "../styles/postDetail.css";
 
 const PostDetail = () => {
   const [post, setPost] = useState(null);
@@ -144,7 +145,7 @@ const PostDetail = () => {
     };
     
 
-  if (!post) return <p>Loading...</p>;
+  if (!post) return <p></p>;
 
   return (
     <div className="post-page">

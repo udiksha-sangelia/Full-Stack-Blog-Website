@@ -3,7 +3,7 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 import { getPostById, deletePost } from "../api/api";
 import CommentForm from "../components/CommentForm";
 import Comment from "../components/comment";
-import "../styles/BlogList.css"; // Import CSS for styling
+import "../styles/PostPage.css"; // Import CSS for styling
 
 const PostPage = () => {
   const [post, setPost] = useState(null);

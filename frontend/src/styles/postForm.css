@@ -1,0 +1,36 @@
+.create-post {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.post-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  padding: 30px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  color: #fff;
+}
+
+.post-title, .post-content {
+  background: rgba(0, 0, 0, 0.4);
+  border: none;
+  color: #fff;
+}
+
+.post-title::placeholder, .post-content::placeholder {
+  color: #ccc;
+}
+
+.post-card button {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.create-btn {
+  background: linear-gradient(135deg, #3357cc, #725ece);
+}

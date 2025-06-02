@@ -1,0 +1,79 @@
+/* PostPage.css: Neon Galaxy Theme */
+
+.post-page {
+  max-width: 800px;
+  margin: 40px auto;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 40px 30px;
+  border-radius: 15px;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+.post-page h2 {
+  font-size: 2rem;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+  margin-bottom: 20px;
+}
+
+.post-page p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.post-page b {
+  color: #ff00ff;
+}
+
+.post-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.delete-btn, .edit-btn {
+  background: linear-gradient(135deg, #00ffff, #ff00ff);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.delete-btn:hover, .edit-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00ffff;
+}
+
+.edit-btn {
+  background: linear-gradient(135deg, #ff00ff, #00ffff);
+}
+
+h3 {
+  color: #00ffff;
+  margin-top: 30px;
+  font-size: 1.5rem;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+@media (max-width: 768px) {
+  .post-page {
+    padding: 20px;
+  }
+
+  .post-page h2 {
+    font-size: 1.5rem;
+  }
+
+  .post-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

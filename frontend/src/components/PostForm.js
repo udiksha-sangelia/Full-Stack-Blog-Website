@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios"; // Ensure axios is installed
+import "../styles/postForm.css"
 
 const PostForm = () => {
   const [title, setTitle] = useState("");
@@ -58,7 +59,7 @@ const PostForm = () => {
         onChange={(e) => setContent(e.target.value)}
         required
       />
-      <button type="submit">Create Post</button>
+      <button type="submit" className="create-btn">Create Post</button>
     </form>
   </div>
   </div>

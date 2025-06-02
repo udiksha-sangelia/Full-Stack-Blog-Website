@@ -1,0 +1,137 @@
+/* PostDetail.css: Neon Galaxy Post Detail */
+
+.post-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  padding: 20px;
+}
+
+.post-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 700px;
+  width: 100%;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+.post-card h2 {
+  font-size: 2rem;
+  color: #00ffff;
+  margin-bottom: 10px;
+}
+
+.post-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.post-card b {
+  color: #ff00ff;
+}
+
+.post-card .trash,
+.post-card .pencil {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: transform 0.2s ease;
+}
+
+.post-card .trash img,
+.post-card .pencil img {
+  width: 20px;
+  filter: invert(60%) sepia(100%) saturate(500%) hue-rotate(180deg);
+}
+
+.post-card .trash:hover img {
+  filter: invert(40%) sepia(100%) saturate(500%) hue-rotate(300deg);
+  transform: scale(1.2);
+}
+
+.post-card .pencil:hover img {
+  filter: invert(70%) sepia(100%) saturate(500%) hue-rotate(90deg);
+  transform: scale(1.2);
+}
+
+.post-action {
+  margin-top: 30px;
+}
+
+.post-action h3 {
+  color: #00ffff;
+  margin-bottom: 10px;
+}
+
+.comment-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.comment-item strong {
+  color: #ff00ff;
+}
+
+.comment-item button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.comment-item img {
+  width: 18px;
+  filter: invert(70%) sepia(100%) saturate(500%) hue-rotate(0deg);
+  transition: transform 0.2s ease;
+}
+
+.comment-item img:hover {
+  filter: invert(40%) sepia(100%) saturate(500%) hue-rotate(300deg);
+  transform: scale(1.2);
+}
+
+/* Comment form */
+.post-action form {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-action input[type="text"] {
+  background: rgba(0, 0, 0, 0.4);
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.post-action input::placeholder {
+  color: #ccc;
+}
+
+.post-action button[type="submit"] {
+  background: linear-gradient(135deg, #3357cc, #725ece);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.post-action button[type="submit"]:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00ffff;
+}
